@@ -1,0 +1,78 @@
+<html>
+<head>
+	 <title>Missing Profiles</title>
+        {% load staticfiles %}
+	<!--<link rel="stylesheet" type="text/css" href="{% static 'home/css/list.css'%}">-->
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/Alogedin.css'%}">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'home/css/navbar.css'%}">
+    <link rel="icon" type="image/gif/png" href="{% static 'home/assets/images/icons/search.ico'%}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Fonts Link -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600&amp;subset=latin-ext" rel="stylesheet">
+
+    <!-- Bootstrap CSS Link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <!-- JS -->
+    <script src="{% static 'home/assets/js/vendor/modernizr-2.8.3.min.js' %}"></script>
+    <script src="{% static 'home/assets/js/vendor/jquery-1.12.0.min.js' %}"></script>
+
+</head>
+<body>
+		 <!--NavBare-->
+       <ul class="navBar">
+
+            <li class="selected">
+                <a href="{% url 'home:logedin' %}">Home</a>
+            </li>
+            <li>
+                <a href="{% url  'home:about' %}"">About</a>
+            </li>
+            <li>
+                <a href="{% url  'home:contactus' %}"">Contact Us</a>
+            </li>
+            <li>
+                <a href="web1.html">Donate</a>
+            </li>
+           <li class="liRight">
+				   <a href="{% url  'home:home' %}">Log Out</a>
+           </li>
+
+
+        </ul>
+         {% if all_Mprofiles %}
+        <center><h2>Here Are All Profiles</h2></center>
+         <br>
+         <br>
+        <ul>
+            {% for mprofile in all_Mprofiles %}
+                 <div class="thumbnail">
+                        <a href="{% url 'home:missingDetails' mprofile.id %}">
+                            <center><img src="{{ mprofile.MissingPersonImage.url }}" alt="img" class="img-responsive"></center>
+                        </a>
+                        <br>
+                        <br>
+                        <div class="caption">
+                             <center><h3>{{ mprofile.FirstName }}</h3></center>
+                             <center><h3>{{ mprofile.SecondName }}</h3></center>
+                             <br>
+                            <!-- View Details -->
+                            <center><a href="{% url 'home:missingDetails' mprofile.id %}" class="btn btn-primary btn-sm" role="button">View Details</a></center>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                {% cycle '' '' '' '' '' '<div class="clearfix visible-lg"></div>' %}
+            {% endfor %}
+        </ul>
+        {% else %}
+        <h3>There is no Profiles</h3>
+        {% endif %}
+
+
+
+</body>
+</html>

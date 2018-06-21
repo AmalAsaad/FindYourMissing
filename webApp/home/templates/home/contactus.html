@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact Us</title>
+	{% load staticfiles %}
+	<link rel="icon" type="image/gif/png" href="{% static 'home/assets/images/icons/search.ico'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'home/css/contactus.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'home/css/navbar.css' %}">
+
+</head>
+<body>
+	<!--NavBare-->
+	<div>
+	       <ul class="navBar">
+
+	           <li class="selected">
+	                <a href="{% url  'home:home' %}">Home</a>
+	            </li>
+	            <li>
+	                <a href="{% url  'home:about' %}"">About</a>
+	            </li>
+	            <li>
+	                <a href="{% url  'home:contactus' %}">Contact Us</a>
+	            </li>
+	            <li>
+	                <a href="##">Donate</a>
+	            </li>
+			   <li class="liRight">
+                	<a href="{% url 'home:register' %}">Register</a>
+            	</li>
+            	<li class="liRight">
+                	<a href="{% url 'home:login' %}">Login</a>
+            	</li>
+
+
+
+	        </ul>
+        </div>
+
+	<section>
+		<div class="container">
+			<div class="contactUs_form">
+				<h1> Contact US</h1>
+				<p class="desc">We would love to hear from you!</p>
+				<form>
+					<input type="text" name="userName" placeholder="Your Name*">
+					<input type="email" name="userEmail" placeholder="Your Email*">
+					<input type="number" name="userPhone" placeholder="Your Phone*">
+					<textarea rows="5" cols="39" name="message" placeholder="Your Message*" ></textarea>
+					<br>
+					<a href=""><input type="submit" name="" value="Send Message"></a>
+				</form>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

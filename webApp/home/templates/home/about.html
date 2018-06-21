@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>About</title>
+    	{% load staticfiles %}
+
+	<link rel="stylesheet" type="text/css" href="{% static 'home/css/about.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'home/css/navbar.css' %}">
+	  <link rel="icon" type="image/gif/png" href="{% static 'home/assets/images/icons/search.ico'%}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Fonts Link -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600&amp;subset=latin-ext" rel="stylesheet">
+
+    <!-- Bootstrap CSS Link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <!-- JS -->
+    <script src="{% static 'home/assets/js/vendor/modernizr-2.8.3.min.js' %}" ></script>
+    <script src="{% static 'home/assets/js/vendor/jquery-1.12.0.min.js' %}"></script>
+
+
+</head>
+<body>
+	<!--NavBare-->
+	<div>
+	       <ul class="navBar">
+
+	            <li class="selected">
+	                <a href="{% url  'home:home' %}">Home</a>
+	            </li>
+	            <li>
+	                <a href="{% url  'home:about' %}">About</a>
+	            </li>
+
+	            <li>
+	                <a href="{% url  'home:contactus' %}">Contact Us</a>
+	            </li>
+	            <li>
+	                <a href="#">Donate</a>
+	            </li>
+	            <li class="liRight">
+                	<a href="{% url 'home:register' %}">Register</a>
+            	</li>
+	            <li class="liRight">
+	                <a href="{% url 'home:login' %}">Login</a>
+	            </li>
+
+
+	        </ul>
+        </div>
+
+        <section>
+        <div class="title"><h1> About US</h1></div>
+		<div class="container">
+			<div class="aboutUs">
+				<h3>We help you wholeheartedly</h3>
+				<p class="p1">There are so many people in this world who are missing from home or family. In most cases we find that small childrens are missing from their parents at public palces.</p>
+				<p>
+
+					If someone is waiting for you at your home, how does it feel when you don't come back to home within time. Sameway lots of people in our country are missing and not come back to home yet.
+
+				</p>
+				<p>
+					So we are designing our  website to help a person to find their missing familians.
+
+					Here anyone can report about missing person or can get details about found people.
+				</p>
+
+					<!--<a href=""><input type="submit" name="" value="Donate"></a>-->
+
+			</div>
+			<div class="leftPic"></div>
+		</div>
+	</section>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+body{
+	padding: 0px;
+	margin:0px;
+	background: url("big-family-background.png");
+	background-size: cover;
+}
+section{
+	width: 100%;
+	height: 100%;
+	
+}
+.title{
+	text-align: center;
+	padding: 50px 0 20px;
+}
+
+.title h1{
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	color: #262626;
+	font-size: 36px;
+}
+
+.container{
+	width: 50%;
+	height: 400px;
+	background: 	#FFFFE0;
+	margin: 0px auto;
+	border: 2px solid #fff;
+	box-shadow: 0 0 20px rgba(0,0,0,.5);
+	
+}
+.container .leftPic{
+	float: left;
+	width: 50%;
+	height: 400px;
+	background: url("fh.jpg");
+	background-size: cover;
+	box-sizing: border-box;
+
+}
+.container .aboutUs{
+	float: right;
+	width: 50%;
+	height: 400px;
+	box-sizing: border-box;
+	/*background: rgba(0,0,0,.4);*/
+	box-shadow: 0 0 20px rgba(0,0,0,.4);
+}
+.aboutUs h3{
+	margin-top: 20px;
+	text-align: center;
+	font-family: "Comic Sans MS";
+}
+.aboutUs .p1{
+	margin-top: 5px;
+}
+.aboutUs p{
+
+	text-align: center;
+	color: #000;
+	margin: 0 0 20px;
+
+}
+/*.aboutUs{
+	position: relative;
+	box-sizing: border-box;
+	padding: 60px 30px;
+	transition: .5%;
+	background: rgba(0,0,0,.4);
+	box-shadow: 0 0 20px rgba(0,0,0,.4);
+}
+.aboutUs h1{
+	margin: 0 0 10px;
+	font-size: 30px;
+	text-transform: uppercase;
+	color: #fff;
+}*/
